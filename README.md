@@ -40,23 +40,23 @@ When creating the app, everything was original done inside Android Studio and th
 For the layout of the project I'll be breaking down each part of the architecture, MVI and Separation, and trade-off, primitive/String state and fixed aspect grid/ adaptive layout.
 Explaining why I choose these specific setups for my app.
 
-- **MVI
+- **MVI**
   This will keep the app in a state where it simple cause it uses a single source of truth, going from the 'CalculatorState' to 'CalculatorViewModel'.
   Having the users action (CalculatorActions) input send events to the view model through the inAction(), which then updates the state and push changes to the UI.
     
-- **Seperation
+- **Separation**
  By separating codes classes into a clean layout, it helps the math portion of the app not get tangled up with the evaluation logic 
  
-- **Primitive/String state
+- **Primitive/String state**
 Trade-off: Keeping the number stored in a simple string, which will help the keep it calculated when needed, example 'number1 and number2'.
 Impact: This makes handling the inputs easier manage while also making the basic two number math straightforward without the tricky chain complex math messing up the operations, example the app able to operator priorities (5+9*7)= 68
 without having to rework in the parser.
   
-- **Fixed aspect grid/ adaptive layout
+- **Fixed aspect grid/ adaptive layout**
 Trade-off: With the way the UI is designed, I had the buttons use a fixed sizing. In doing so would only have the calculator be used properly in a vertical position (phone screen mode). 
 Impact: Other than it being fixed to a specific position, the app dose work right out of the box on phones. However, it dose hinder the design if tried to use it in horizonal position. In my opinion, a calculator works best in horizontal because who turns a regular/ scientific calculator sideways/ vertical. 
 
-### Calculartor enhancements
+### Calculator enhancements
 The enhancements I used in this project were a percentage and parentheses button. 
 I wanted to implement the same button setup just like what my phone calculator already has. It gives me a sense of familiarity. 
 Though my project is not as complex as what a major tech company can create, it still gets the job done. 
@@ -64,6 +64,8 @@ With these enhancements I gives the calculator a chance to do more complicated p
 
 - **Parentheses** The parentheses forces the standard order of operations to do the calculations inside the parentheses first before any other value, example: (85*4)+6=426.
 - **percentage** While the percentage automatically converts the number into decimal equivalent, giving users the ability to calculate proportions quickly, example: 200*50%=100.
+- **Dark/Light Mode** This gives the app users a chance to change how they would like the app to look like in either light or dark mode, even added a simple emoji for the sun and moon, so that users know which to pick. In my opinion, dark mode is better on the eyes.
+- **Color Change Buttons** This allows a bit of a creative design to the app. It maybe small but it is still impressive visual part of the project. This is where you can see each button when press will turn a lighter color from the main. 
 
 ### Refection 
  This was a fun project as I got to see the building blocks of how a "simple" app that is the calculator is created and what the finished product looks like. It was fascinating to see my calculator works properly almost the same as the one on my personal phone. 
